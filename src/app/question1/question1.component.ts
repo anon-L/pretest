@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-  
+  selector: 'app-question1',
+  templateUrl: './question1.component.html',
+  styleUrls: ['./question1.component.css']
 })
-export class AppComponent {
-  constructor(public httpClient: HttpClient){}
-  sendGetRequest(){
-    this.httpClient.get('https://api.publicapis.org/categories').subscribe((res)=>{
-        console.log(res);
-    });
-}
-  title = 'homework';
+export class Question1Component implements OnInit {
+
+  constructor(private titleService:Title)
+   {this.titleService.setTitle("question1"); }
+
+  ngOnInit(): void {
+
+  }
+  title = 'question1';
   function =' ';
   num=0;
   x=0;
@@ -74,5 +74,4 @@ export class AppComponent {
       }
   };
 
-  
 }

@@ -1,0 +1,15 @@
+<div class="flex-container" style="display: flex; flex-wrap: nowrap;background-color: white;
+height: 1000px;" >
+  <div style="height:100%; width: 200px; border-right: 1px solid black; min-width: 200px;">
+     <input #number (keyup)="add(number.value)" type="number">
+  </div>
+  <div style="width: calc(100% - 300px); border-right: 1px solid black;min-width: 100px;">
+  <select (change)="selection($event)" (change)="add(number.value)">
+    <option value="empty">   </option>
+    <option value="isPrime">isPrime</option>
+    <option value="isFib">isFib</option>
+  </select></div>
+  <div style=" min-width: 300px;" >
+    {{text}}</div>
+</div>
+
